@@ -1,0 +1,15 @@
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr  # Basis rekursi
+
+    pivot = arr[len(arr) // 2]  # Pilih pivot (median)
+    left = [x for x in arr if x < pivot]  # Elemen yang lebih kecil dari pivot
+    middle = [x for x in arr if x == pivot]  # Elemen yang sama dengan pivot
+    right = [x for x in arr if x > pivot]  # Elemen yang lebih besar dari pivot
+
+    return quick_sort(left) + middle + quick_sort(right)  # Rekursi
+
+# Contoh penggunaan
+arr = [31, 41, 59, 26, 41, 58]
+sorted_arr = quick_sort(arr)
+print("Hasil sorting:", sorted_arr)
