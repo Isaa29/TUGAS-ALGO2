@@ -10,6 +10,6 @@ def quick_sort(arr):
     return quick_sort(left) + middle + quick_sort(right)  # Rekursi
 
 # Contoh penggunaan
-arr = [31, 41, 59, 26, 41, 58]
+arr = [31, 41, 59, 26, 41, 58, 100, 72, 84]
 sorted_arr = quick_sort(arr)
 print("Hasil sorting:", sorted_arr)
