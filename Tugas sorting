@@ -7,9 +7,15 @@ def quick_sort(arr):
     middle = [x for x in arr if x == pivot]  # Elemen yang sama dengan pivot
     right = [x for x in arr if x > pivot]  # Elemen yang lebih besar dari pivot
 
+    print(f"Pivot: {pivot}")
+    print(f"Left: {left}")
+    print(f"Middle: {middle}")
+    print(f"Right: {right}")
+    print("---")
+
     return quick_sort(left) + middle + quick_sort(right)  # Rekursi
 
-# Contoh penggunaan
-arr = [31, 41, 59, 26, 41, 58, 100, 72, 84]
+# Contoh penggunaan dengan angka yang lebih besar dari pivot
+arr = [31, 41, 59, 26, 41, 58, 100, 72, 84] 
 sorted_arr = quick_sort(arr)
 print("Hasil sorting:", sorted_arr)
